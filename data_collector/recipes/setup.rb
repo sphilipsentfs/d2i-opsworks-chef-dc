@@ -12,7 +12,7 @@ end
   # Cookbook:: testcookbook
   # Recipe:: default
   #
-  # Copyright:: 2017, The Authors, All Rights Reserved.
+# Copyright:: 2017, The Authors, All Rights Reserved.
 File 'c:\user\Dimple\Desktop\test.txt' do
   Content 'This is a test file'
   action :create
