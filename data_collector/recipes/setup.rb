@@ -6,13 +6,13 @@ log "Welcome to Chef Infra Client!" do
   level :info
 end
 
-  # For more information, see the documentation: https://docs.chef.io/recipes
+# For more information, see the documentation: https://docs.chef.io/recipes
 
-  # For further information, see the Chef Infra documentation (https://docs.chef.io/attributes/).
-  #
-  # Cookbook:: testcookbook
-  # Recipe:: default
-  #
+# For further information, see the Chef Infra documentation (https://docs.chef.io/attributes/).
+#
+# Cookbook:: testcookbook
+# Recipe:: default
+#
 # Copyright:: 2017, The Authors, All Rights Reserved.
 File 'c:\user\Dimple\Desktop\test.txt' do
   Content 'This is a test file'
