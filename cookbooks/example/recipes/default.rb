@@ -14,7 +14,7 @@ end
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
-File 'c:\user\Dimple\Desktop\test.txt' do
+file 'c:\user\Dimple\Desktop\test.txt' do
   Content 'This is a test file'
   action :create
 end
