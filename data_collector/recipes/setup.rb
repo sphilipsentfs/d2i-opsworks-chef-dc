@@ -14,7 +14,7 @@ end
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
-file 'c:\users\Public\test.txt' do
+file 'C:\Users\Public\test.txt' do
   content 'This is a test file'
   action :create
 end
