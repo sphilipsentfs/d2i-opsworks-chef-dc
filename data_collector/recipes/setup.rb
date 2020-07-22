@@ -19,6 +19,6 @@ file 'c:\user\Dimple\Desktop\test.txt' do
   action :create
 end
 
-windows_feature 'NET-Framework' do
-  action :install
-end
+# windows_feature 'NET-Framework' do
+#   action :install
+# end
