@@ -14,10 +14,10 @@ end
 # Recipe:: default
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
-# file 'c:\user\Dimple\Desktop\test.txt' do
-#   content 'This is a test file'
-#   action :create
-# end
+file 'c:\users\Public\test.txt' do
+  content 'This is a test file'
+  action :create
+end
 
 # windows_feature 'NET-Framework' do
 #   action :install
