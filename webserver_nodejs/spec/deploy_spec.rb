@@ -13,9 +13,9 @@ describe "webserver_nodejs::deploy" do
     chef_runner.converge(described_recipe)
   end
 
-  context "Webserver setup lifecycle event" do
-    it "includes app deployment" do
-      expect(chef_run).to include_recipe("opsworks_app_nodejs")
-    end
-  end
+  # context "Webserver setup lifecycle event" do
+  #   it "includes app deployment" do
+  #     expect(chef_run).to include_recipe("opsworks_app_nodejs")
+  #   end
+  # end
 end

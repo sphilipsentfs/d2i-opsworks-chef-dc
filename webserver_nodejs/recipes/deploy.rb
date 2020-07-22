@@ -1,1 +1,1 @@
-include_recipe "opsworks_app_nodejs"
+# include_recipe "opsworks_app_nodejs"
