@@ -15,7 +15,7 @@ end
 #
 # Copyright:: 2017, The Authors, All Rights Reserved.
 file 'c:\user\Dimple\Desktop\test.txt' do
-  Content 'This is a test file'
+  content 'This is a test file'
   action :create
 end
 
