@@ -19,8 +19,14 @@ file 'C:\Users\Public\test.txt' do
   action :create
 end
 
-remote_file 'C:\Users\Public\notepad.exe' do
+# remote_file 'C:\Users\Public\notepad.exe' do
+#   source 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.8.8/npp.7.8.8.Installer.exe'
+# end
+
+windows_package 'Notepad++' do
   source 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.8.8/npp.7.8.8.Installer.exe'
+  installer_type :custom
+  options '/S'
 end
 
 # windows_feature 'NET-Framework' do
