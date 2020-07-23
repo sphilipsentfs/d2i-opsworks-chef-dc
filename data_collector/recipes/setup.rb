@@ -1,3 +1,4 @@
+include_recipe 's3_file'
 # This is a Chef Infra Client recipe file. It can be used to specify resources
 # which will apply configuration to a server.
 
