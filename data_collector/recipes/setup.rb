@@ -29,8 +29,15 @@ windows_package 'Notepad++' do
   options '/S'
 end
 
+s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
+  remote_path 'DataCollector.Client.Setup.exe'
+  bucket 'd2idatacollector'
+  s3_url 'https://s3.amazonaws.com/bucket'
+  action :create
+end
+
 windows_package 'Data Collector' do
-  source 'https://d2idatacollector.s3.eu-central-1.amazonaws.com/DataCollector.Client.Setup.exe'
+  source 'C:\Users\Public\DataCollector.Client.Setup.exe'
   installer_type :custom
   options '/quiet /log "c:\Dump\installerLog.txt" InstallationType=1 ContentFilter=1 PackageDistributor=1 EmailAddress="emailaddress@goes.here'
 end
