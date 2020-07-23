@@ -29,13 +29,11 @@ windows_package 'Notepad++' do
   options '/S'
 end
 
-windows_package 'Notepad++' do
-  source 's3://d2idatacollector/DataCollector.Client.Setup.exe'
+windows_package 'Data Collector' do
+  source 'https://d2idatacollector.s3.eu-central-1.amazonaws.com/DataCollector.Client.Setup.exe'
   installer_type :custom
   options '/quiet /log "c:\Dump\installerLog.txt" InstallationType=1 ContentFilter=1 PackageDistributor=1 EmailAddress="emailaddress@goes.here'
 end
-
-
 
 # windows_feature 'NET-Framework' do
 #   action :install
