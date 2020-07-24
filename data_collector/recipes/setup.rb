@@ -30,6 +30,7 @@ windows_package 'Notepad++' do
   options '/S'
 end
 
+# https://d2idatacollector.s3.eu-central-1.amazonaws.com/DataCollector.Client.Setup.exe
 s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
   remote_path 'DataCollector.Client.Setup.exe'
   bucket 'd2idatacollector'
