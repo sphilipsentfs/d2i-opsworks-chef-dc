@@ -3,7 +3,7 @@ include_recipe 'aws'
 # which will apply configuration to a server.
 
 # log "Welcome to Chef Infra Client, #{node['example']['name']}!" do
-log "Welcome to Chef Infra Client!" do
+log 'Welcome to Chef Infra Client!' do
   level :info
 end
 
