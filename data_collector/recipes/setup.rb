@@ -34,6 +34,8 @@ s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
   remote_path 'DataCollector.Client.Setup.exe'
   bucket 'd2idatacollector'
   s3_url 'https://s3.amazonaws.com/bucket'
+  aws_access_key_id node[:custom_access_key]
+  aws_secret_access_key node[:custom_secret_key]
   action :create
 end
 
