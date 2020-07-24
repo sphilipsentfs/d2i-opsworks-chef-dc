@@ -1,3 +1,4 @@
+include_recipe 'aws'
 # This is a Chef Infra Client recipe file. It can be used to specify resources
 # which will apply configuration to a server.
 
@@ -29,11 +30,18 @@ windows_package 'Notepad++' do
   options '/S'
 end
 
-s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
-  remote_path 'DataCollector.Client.Setup.exe'
+# s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
+#   remote_path 'DataCollector.Client.Setup.exe'
+#   bucket 'd2idatacollector'
+#   s3_url 'https://s3.amazonaws.com/bucket'
+#   action :create
+# end
+
+aws_s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
   bucket 'd2idatacollector'
-  s3_url 'https://s3.amazonaws.com/bucket'
-  action :create
+  remote_path 'DataCollector.Client.Setup.exe'
+  # aws_access_key_id node[:custom_access_key]
+  # aws_secret_access_key node[:custom_secret_key]
 end
 
 windows_package 'Data Collector' do
