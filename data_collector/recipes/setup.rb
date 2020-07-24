@@ -37,6 +37,7 @@ s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
   s3_url 'https://d2idatacollector.s3.eu-central-1.amazonaws.com'
   # s3_url 'https://s3.amazonaws.com/bucket'
   # https://d2idatacollector.s3.eu-central-1.amazonaws.com/DataCollector.Client.Setup.exe
+  region 'eu-central-1'
   aws_access_key_id node[:custom_access_key]
   aws_secret_access_key node[:custom_secret_key]
   action :create
