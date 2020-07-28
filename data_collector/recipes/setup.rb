@@ -25,7 +25,7 @@ end
 # end
 
 windows_package 'Notepad++' do
-  source 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.8.8/npp.7.8.8.Installer.exe'
+  source 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.8.9/npp.7.8.9.Installer.exe'
   installer_type :custom
   options '/S'
 end
