@@ -30,17 +30,17 @@ windows_package 'Notepad++' do
   options '/S'
 end
 
-# https://d2idatacollector.s3.eu-central-1.amazonaws.com/DataCollector.Client.Setup.exe
-s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
-  remote_path 'DataCollector.Client.Setup.exe'
-  # bucket 'd2idatacollector'
-  s3_url 'https://d2idatacollector.s3.eu-central-1.amazonaws.com'
-  # s3_url 'https://s3.amazonaws.com/bucket'
-  # https://d2idatacollector.s3.eu-central-1.amazonaws.com/DataCollector.Client.Setup.exe
-  aws_access_key_id node[:custom_access_key]
-  aws_secret_access_key node[:custom_secret_key]
-  action :create
-end
+# # https://d2idatacollector.s3.eu-central-1.amazonaws.com/DataCollector.Client.Setup.exe
+# s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
+#   remote_path 'DataCollector.Client.Setup.exe'
+#   # bucket 'd2idatacollector'
+#   s3_url 'https://d2idatacollector.s3.eu-central-1.amazonaws.com'
+#   # s3_url 'https://s3.amazonaws.com/bucket'
+#   # https://d2idatacollector.s3.eu-central-1.amazonaws.com/DataCollector.Client.Setup.exe
+#   aws_access_key_id node[:custom_access_key]
+#   aws_secret_access_key node[:custom_secret_key]
+#   action :create
+# end
 
 # aws_s3_file 'C:\Users\Public\DataCollector.Client.Setup.exe' do
 #   bucket 'd2idatacollector'
