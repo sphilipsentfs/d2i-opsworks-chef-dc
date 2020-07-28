@@ -25,7 +25,7 @@ end
 # end
 
 windows_package 'Notepad++' do
-  source 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.8.8/npp.7.8.8.Installer.exe'
+  source 'https://github.com/notepad-plus-plus/notepad-plus-plus/releases/download/v7.8.8/npp.7.8.9.Installer.exe'
   installer_type :custom
   options '/S'
 end
@@ -49,11 +49,11 @@ end
 #   # aws_secret_access_key node[:custom_secret_key]
 # end
 
-windows_package 'Data Collector' do
-  source 'C:\Users\Public\DataCollector.Client.Setup.exe'
-  installer_type :custom
-  options '/quiet /log "c:\Dump\installerLog.txt" InstallationType=1 ContentFilter=1 PackageDistributor=1 EmailAddress="emailaddress@goes.here'
-end
+# windows_package 'Data Collector' do
+#   source 'C:\Users\Public\DataCollector.Client.Setup.exe'
+#   installer_type :custom
+#   options '/quiet /log "c:\Dump\installerLog.txt" InstallationType=1 ContentFilter=1 PackageDistributor=1 EmailAddress="emailaddress@goes.here'
+# end
 
 # windows_feature 'NET-Framework' do
 #   action :install
