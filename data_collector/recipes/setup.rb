@@ -32,17 +32,17 @@ end
 if node['filesystem']['C:']['kb_available'] > 30000000
   log 'More than 30 GB disk space free' do
     level :info
-  end 
+  end
 else
   log 'Less than 30 GB disk space free' do
     level :info
   end
 end
 
-services = ['DataCollector.Distribution', 'service3']
+services = ['DataCollector.Distribution', 'DataCollector.DataProcessing', 'DataCollector.Configuration', 'DataCollector.DataProvisioning',
+  'DataCollector.Messaging', 'DataCollector.Availability', 'DataCollector.NodeManagement', 'DataCollector.NodeManagementProxy', 'DataCollector.Logging']
 
-services.each do |serv|
-# node['recipe']['services'].each do |serv|
+services.next do |serv|
   if ::Win32::Service.exists?(serv)
     windows_service serv do
       supports status: true
