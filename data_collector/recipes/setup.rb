@@ -29,7 +29,11 @@ windows_package 'Notepad++' do
   options '/S'
 end
 
-# when node['filesystem']['C:']['kb_available'] > 30000000 do
+if node['filesystem']['C:']['kb_available'] > 30000000 then
+  puts 'More than 30 GB disk space free'
+else
+  puts 'Less than 30 GB disk space free'
+end
 
 services = ['DataCollector.Distribution', 'service3']
 
