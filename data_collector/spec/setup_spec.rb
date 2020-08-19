@@ -14,13 +14,8 @@ describe "webserver_nodejs::setup" do
   end
 
   context "Webserver setup lifecycle event" do
-
     it "includes nodejs" do
       expect(chef_run).to include_recipe("opsworks_nodejs")
     end
-
-    # it "includes S3 dependency installation" do
-    #   expect(chef_run).to include_recipe("s3_file::dependencies")
-    # end
   end
 end

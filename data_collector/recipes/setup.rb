@@ -1,4 +1,3 @@
-include_recipe 's3_file'
 # This is a Chef Infra Client recipe file. It can be used to specify resources
 # which will apply configuration to a server.
 
@@ -30,12 +29,18 @@ windows_package 'Notepad++' do
   options '/S'
 end
 
+# when node['filesystem']['C:']['kb_available'] > 30000000 do
+
+services = ['DataCollector.Distribution', 'service3']
+
+services.each do |serv|
+# node['recipe']['services'].each do |serv|
+  windows_service serv do
+    action :stop
+  end
+end
 # windows_package 'Data Collector' do
 #   source 'C:\Users\Public\DataCollector.Client.Setup.exe'
 #   installer_type :custom
 #   options '/quiet /log "c:\Dump\installerLog.txt" InstallationType=1 ContentFilter=1 PackageDistributor=1 EmailAddress="emailaddress@goes.here'
-# end
-
-# windows_feature 'NET-Framework' do
-#   action :install
 # end
