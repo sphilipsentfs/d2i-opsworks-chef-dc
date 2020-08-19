@@ -35,9 +35,11 @@ services = ['DataCollector.Distribution', 'service3']
 
 services.each do |serv|
 # node['recipe']['services'].each do |serv|
-  windows_service serv do
-    supports status: true
-    action :stop
+  if ::Win32::Service.exists?(serv)
+    windows_service serv do
+      supports status: true
+      action :stop
+    end
   end
 end
 # windows_package 'Data Collector' do
