@@ -42,7 +42,7 @@ end
 services = ['DataCollector.Distribution', 'DataCollector.DataProcessing', 'DataCollector.Configuration', 'DataCollector.DataProvisioning',
   'DataCollector.Messaging', 'DataCollector.Availability', 'DataCollector.NodeManagement', 'DataCollector.NodeManagementProxy', 'DataCollector.Logging']
 
-services.next do |serv|
+services.each do |serv|
   if ::Win32::Service.exists?(serv)
     windows_service serv do
       supports status: true
