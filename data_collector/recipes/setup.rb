@@ -56,9 +56,9 @@ end
 #   options '/quiet /log "c:\Dump\installerLog.txt" InstallationType=1 ContentFilter=1 PackageDistributor=1 EmailAddress="emailaddress@goes.here'
 # end
 
-remote_directory 'C:/kdjflk' do
-  owner 'root'
-  group 'root'
-  mode '0755'
-  action :create
-end
+# remote_directory 'C:/kdjflk' do
+#   owner 'root'
+#   group 'root'
+#   mode '0755'
+#   action :create
+# end
